@@ -27,97 +27,97 @@ Assignment 1}
 
 \begin{enumerate}
 
-\item[1.] [15 Points] For each of the following statements write if the statement is TRUE or FALSE. If the statement is TRUE then provide a proof. If the statement is FALSE then provide a counter-example.
+	\item[1.] [15 Points] For each of the following statements write if the statement is TRUE or FALSE. If the statement is TRUE then provide a proof. If the statement is FALSE then provide a counter-example.
 
-\begin{enumerate}
-	
-	\item For every language $L$ we have $L^2 \subseteq L^3$
-	
-	\noindent \textbf{Answer:}
+	      \begin{enumerate}
 
-	\noindent \textbf{Proof:} 
-	
-	\item For every two languages $L_1$ and $L_2$ we have $(L_1 \cup L_2)^* \subseteq (L_1L_2)^*$
-	
-	\noindent \textbf{Answer:}
+		      \item For every language $L$ we have $L^2 \subseteq L^3$
 
-	\noindent \textbf{Proof:} 
+		            \noindent \textbf{Answer:}
 
-	\item Let $L_1$ and $L_2$ be two languages such that $\lambda \in L_1 \cap L_2$. Then it holds that $(L_1L_2)^* = (L_2L_1)^*$
-	
-	\noindent \textbf{Answer:}
+		            \noindent \textbf{Proof:}
 
-	\noindent \textbf{Proof:} 
-	
-\end{enumerate}
+		      \item For every two languages $L_1$ and $L_2$ we have $(L_1 \cup L_2)^* \subseteq (L_1L_2)^*$
 
-\newpage
+		            \noindent \textbf{Answer:}
 
-\item[2.] [10 Points] The following is a transition diagram for a DFA over the alphabet $\Sigma = \{0,1\}$. Answer the following questions about this automaton:
+		            \noindent \textbf{Proof:}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.6\textwidth]{img/q2_automata.png}
-\end{figure}
+		      \item Let $L_1$ and $L_2$ be two languages such that $\lambda \in L_1 \cap L_2$. Then it holds that $(L_1L_2)^* = (L_2L_1)^*$
 
-\begin{enumerate}
-	\item What is the start state? What is the set of accept states?
-	
-	\noindent \textbf{Answer:}
-	
-	Start State = $q_0$
-	
-	Accept States = $\{q_0, q_1, q_2, q_3, q_6\}$
+		            \noindent \textbf{Answer:}
 
-	\item What is the sequence of states the DFA goes through on input 101100?
-	
-	\noindent \textbf{Answer:}
+		            \noindent \textbf{Proof:}
 
-	$(q_0, q_1, q_5, q_6, q_7, q_3, q_7)$
+	      \end{enumerate}
 
-	\item Does the machine accept every string $w$ that contains exactly two 1s? Why or why not?
-	
-	\noindent \textbf{Answer:}
+	      \newpage
 
-	\item Does the machine reject every string $w$ that has odd number of 0s? Why or why not?
-	
-	\noindent \textbf{Answer:}
+	\item[2.] [10 Points] The following is a transition diagram for a DFA over the alphabet $\Sigma = \{0,1\}$. Answer the following questions about this automaton:
 
-	\item Describe the language accepted by the machine using the set builder notation.
-	
-	\noindent \textbf{Answer:}
+	      \begin{figure}[h!]
+		      \centering
+		      \includegraphics[width=0.6\textwidth]{img/q2_automata.png}
+	      \end{figure}
 
-\end{enumerate}
+	      \begin{enumerate}
+		      \item What is the start state? What is the set of accept states?
 
-\newpage
+		            \noindent \textbf{Answer:}
 
-\item[3.] [30 Points] For each of the following languages, give a DFA that accepts it.
+		            Start State = $q_0$
 
-\begin{enumerate}
-	\item $\{ba^nb^m : n \geq 3, m \geq 2 \}$
-	
-	\noindent \textbf{Answer:}
-	
-	\item $\{w \in \{a,b \}^* : \text{every maximal substring } w \text{ consisting entirely of symbols } a \\ \text{ is of length exactly 3} \}$
-		
-	\noindent \textbf{Answer:}
+		            Accept States = $\{q_0, q_1, q_2, q_3, q_6\}$
 
-	\item $\{w \in \{a,b \}^* : \text{$w$ does not contain $bab$ as a substring} \}$
-	
-	\noindent \textbf{Answer:}
+		      \item What is the sequence of states the DFA goes through on input 101100?
 
-	\item $\{w \in \{a,b \}^* : \text{$w$ begins with bb and $n_b(w)$ mod 3 = 0} \}$
-	
-	\noindent \textbf{Answer:}
+		            \noindent \textbf{Answer:}
 
-	\item $\{a^mb^n : mn > 4\}$
-	
-	\noindent \textbf{Answer:}
+		            $(q_0, q_1, q_5, q_6, q_7, q_3, q_7)$
 
-	\item $\{vwv^R : v,m \in \{a,b \}^* \text{ and} |v| = 2 \}$
-	
-	\noindent \textbf{Answer:}
-\end{enumerate}
+		      \item Does the machine accept every string $w$ that contains exactly two 1s? Why or why not?
+
+		            \noindent \textbf{Answer:}
+
+		      \item Does the machine reject every string $w$ that has odd number of 0s? Why or why not?
+
+		            \noindent \textbf{Answer:}
+
+		      \item Describe the language accepted by the machine using the set builder notation.
+
+		            \noindent \textbf{Answer:}
+
+	      \end{enumerate}
+
+	      \newpage
+
+	\item[3.] [30 Points] For each of the following languages, give a DFA that accepts it.
+
+	      \begin{enumerate}
+		      \item $\{ba^nb^m : n \geq 3, m \geq 2 \}$
+
+		            \noindent \textbf{Answer:}
+
+		      \item $\{w \in \{a,b \}^* : \text{every maximal substring } w \text{ consisting entirely of symbols } a \\ \text{ is of length exactly 3} \}$
+
+		            \noindent \textbf{Answer:}
+
+		      \item $\{w \in \{a,b \}^* : \text{$w$ does not contain $bab$ as a substring} \}$
+
+		            \noindent \textbf{Answer:}
+
+		      \item $\{w \in \{a,b \}^* : \text{$w$ begins with bb and $n_b(w)$ mod 3 = 0} \}$
+
+		            \noindent \textbf{Answer:}
+
+		      \item $\{a^mb^n : mn > 4\}$
+
+		            \noindent \textbf{Answer:}
+
+		      \item $\{vwv^R : v,m \in \{a,b \}^* \text{ and} |v| = 2 \}$
+
+		            \noindent \textbf{Answer:}
+	      \end{enumerate}
 
 \end{enumerate}
 
