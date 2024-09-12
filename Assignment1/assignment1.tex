@@ -33,7 +33,7 @@ Assignment 1}
 
 		      \item For every language $L$ we have $L^2 \subseteq L^3$
 
-		            \noindent \textbf{Answer:}
+		            \noindent \textbf{Answer:} TRUE
 
 		            \noindent \textbf{Proof:}
 
@@ -57,7 +57,7 @@ Assignment 1}
 
 	      \begin{figure}[h!]
 		      \centering
-		      \includegraphics[width=0.6\textwidth]{img/q2_automata.png}
+		      \includegraphics[width=0.6\textwidth]{img/q2/q2_automata.png}
 	      \end{figure}
 
 	      \begin{enumerate}
@@ -71,21 +71,30 @@ Assignment 1}
 
 		      \item What is the sequence of states the DFA goes through on input 101100?
 
-		            \noindent \textbf{Answer:}
-
-		            $(q_0, q_1, q_5, q_6, q_7, q_3, q_7)$
+		            \noindent \textbf{Answer:} $(q_0, q_1, q_5, q_6, q_7, q_3, q_7)$
 
 		      \item Does the machine accept every string $w$ that contains exactly two 1s? Why or why not?
 
-		            \noindent \textbf{Answer:}
+		            \noindent \textbf{Answer:} $L = \{0^*10^*10^* \}$
+
+		            Yes. Since the string always contains exactly two 1s, the machine traverses to one of these states $\{q_2, q_6 \}$. Since $q_2, q_6 \in F$ and only 0 appear in the string after consuming both 1s, the machine can only transition between these acceptance states.
 
 		      \item Does the machine reject every string $w$ that has odd number of 0s? Why or why not?
 
-		            \noindent \textbf{Answer:}
+		            \noindent \textbf{Answer:} $L = \{w \in \Sigma^* : \text{Where $n_0(w)$ mod $2 \neq 0$} \}$
+
+		            No. Since there's an odd number of 0s, the any string will always terminate in the following states $\{q_4, q_5, q_6, q_7 \}$. However, not all of these states are acceptance states (only $q_6 \in F$). Therefore, depending on how many 1s are present in the string, we may or may not reach an acceptance state.
+
+		            \textbf{Counter Example:} $w = 01$, Final State = $q_5$
 
 		      \item Describe the language accepted by the machine using the set builder notation.
 
 		            \noindent \textbf{Answer:}
+		            \begin{equation}
+			            \begin{split}
+				            L = & \{w \in \Sigma^* : \text{Where } n_0(w) \mod 2 = 0 \} \lor \\ & \{w \in \Sigma^+ : \text{Where } n_0(w) \mod 2 \neq 0 \land n_1(w) = 2 \}
+			            \end{split}
+		            \end{equation}
 
 	      \end{enumerate}
 
@@ -98,25 +107,57 @@ Assignment 1}
 
 		            \noindent \textbf{Answer:}
 
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.75\textwidth]{img/q3/q3_a.png}
+		            \end{figure}
+
 		      \item $\{w \in \{a,b \}^* : \text{every maximal substring } w \text{ consisting entirely of symbols } a \\ \text{ is of length exactly 3} \}$
 
 		            \noindent \textbf{Answer:}
+
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.6\textwidth]{img/q3/q3_b.png}
+		            \end{figure}
 
 		      \item $\{w \in \{a,b \}^* : \text{$w$ does not contain $bab$ as a substring} \}$
 
 		            \noindent \textbf{Answer:}
 
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.6\textwidth]{img/q3/q3_c.png}
+		            \end{figure}
+
 		      \item $\{w \in \{a,b \}^* : \text{$w$ begins with bb and $n_b(w)$ mod 3 = 0} \}$
 
 		            \noindent \textbf{Answer:}
+
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.75	\textwidth]{img/q3/q3_d.png}
+		            \end{figure}
 
 		      \item $\{a^mb^n : mn > 4\}$
 
 		            \noindent \textbf{Answer:}
 
-		      \item $\{vwv^R : v,m \in \{a,b \}^* \text{ and} |v| = 2 \}$
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.8\textwidth]{img/q3/q3_e.png}
+		            \end{figure}
+
+		            \newpage
+
+		      \item $\{vwv^R : v,w \in \{a,b \}^* \text{ and} |v| = 2 \}$
 
 		            \noindent \textbf{Answer:}
+
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.6\textwidth]{img/q3/q3_f.png}
+		            \end{figure}
 	      \end{enumerate}
 
 \end{enumerate}
