@@ -33,9 +33,27 @@ Assignment 1}
 
 		      \item For every language $L$ we have $L^2 \subseteq L^3$
 
-		            \noindent \textbf{Answer:} TRUE
+		            \noindent \textbf{Answer:} FALSE
 
-		            \noindent \textbf{Proof:}
+		            \noindent \textbf{Counter Example:}
+
+		            $\Sigma = \{a,b \}$
+
+		            $L=\{a, ab \}$
+
+		            $L^2=LL=\{aa, aab, aba, abab \}$
+
+		            $L^3=L^2L=\{aaa, aaaba, aaba, aabab, abaa, abaab, ababa, ababab \}$
+
+		            $\{aa, aab, aba, abab \} \not\subseteq \{aaa, aaaba, aaba, aabab, abaa, abaab, ababa, ababab \}$
+
+		            $\therefore L^2 \not\subseteq L^3$
+
+		            \begin{figure}[h!]
+			            \centering
+			            \includegraphics[width=0.9\textwidth]{q1_a.png}
+		            \end{figure}
+
 
 		      \item For every two languages $L_1$ and $L_2$ we have $(L_1 \cup L_2)^* \subseteq (L_1L_2)^*$
 
