@@ -1,0 +1,2 @@
+- Review q2. Check that every sates has a transition for each character in the language.
+- Review 3-b
