@@ -52,9 +52,19 @@ Assignment 1}
 
 		      \item For every two languages $L_1$ and $L_2$ we have $(L_1 \cup L_2)^* \subseteq (L_1L_2)^*$
 
-		            \noindent \textbf{Answer:}
+		            \noindent \textbf{Answer:} FALSE
 
-		            \noindent \textbf{Proof:}
+		            \noindent \textbf{Counter Example:}
+
+		            $L_1 = \{x \}$, $L_2= \{y \}$, $\Sigma = \{x,y \}$
+
+		            $L_1 \cup L_2 = \{x,y \}$, $L_1L_2 = \{xy \}$
+
+		            $(L_1 \cup L_2)^* = \{\lambda \} \cup \{x,y \} \cup \{xx, xy, yx, yy \} \cup \dots$
+
+		            $(L_1L_2)^* = \{\lambda \} \cup \{xy \} \cup \{xyxy \} \cup \{xyxyxy \} \cup \dots$
+
+		            $\therefore (L_1 \cup L_2)^* \not\subseteq (L_1L_2)^*$
 
 		      \item Let $L_1$ and $L_2$ be two languages such that $\lambda \in L_1 \cap L_2$. Then it holds that $(L_1L_2)^* = (L_2L_1)^*$
 
