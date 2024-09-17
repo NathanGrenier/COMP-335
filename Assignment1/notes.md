@@ -1,2 +1,2 @@
-- Review q2. Check that every sates has a transition for each character in the language.
-- Review 3-b
+- [x] Review q2. Check that every sates has a transition for each character in the language.
+- [x] Review 3-b. the string bbb should be accepted (also possible the empty string $\lambda$)
