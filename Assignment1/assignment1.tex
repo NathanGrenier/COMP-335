@@ -66,11 +66,54 @@ Assignment 1}
 
 			            $\therefore (L_1 \cup L_2)^* \not\subseteq (L_1L_2)^*$
 
+			            \newpage
+
 			      \item Let $L_1$ and $L_2$ be two languages such that $\lambda \in L_1 \cap L_2$. Then it holds that $(L_1L_2)^* = (L_2L_1)^*$
 
-			            \noindent \textbf{Answer:}
+			            \noindent \textbf{Answer:} TRUE
 
-			            \noindent \textbf{Proof:}
+			            \noindent \textbf{Direct Proof:}
+
+			            \begin{enumerate}
+				            \item[1.] $\subseteq$:
+
+				                  $\rightarrow$ Let $w \in (L_1L_2)^*$
+
+				                  $\rightarrow$ $w$ is of the form: $w = x_1y_1x_2y_2 \dots x_ny_n$ where $x_i \in L1 \land y_i \in L_2$
+
+				                  $\rightarrow$ Since $\lambda \in L_1 \sup L_2$ then $w = x_1 \lambda y_1 \lambda x_2 \lambda y_2 \dots x_n \lambda y_n$
+
+				                  $\rightarrow$ Format the string $w = (\lambda x_1)y_1(\lambda x_2)y_2 \dots (\lambda x_n)y_n$
+
+				                  $\rightarrow$ Using the associative property of string
+				                  concatenation
+
+				                  ($(a\times b) \times c = a \times (b \times c)$), we can rewrite the string as $w = (y_1x_1)\lambda(y_2x_2)\lambda \dots (y_nx_n)\lambda$
+
+				                  $\rightarrow$ $w = (y_1'x_1')(y_2'x_2') \dots (y_n'x_n')$ where $x_i' \in L_1 \land y_i' \in L_2$
+
+				                  $\therefore$ $w \in (L_2L_1)^*$
+
+				            \item[2.] $\supseteq$:
+
+				                  $\rightarrow$ Let $w \in (L_2L_1)^*$
+
+				                  $\rightarrow$ $w$ is of the form: $w = y_1x_1y_2x_2 \dots y_nx_n$ where $x_i \in L1 \land y_i \in L_2$
+
+				                  $\rightarrow$ Since $\lambda \in L_1 \sup L_2$ then $w = y_1 \lambda x_1 \lambda y_2 \lambda x_2 \dots y_n \lambda x_n$
+
+				                  $\rightarrow$ Format the string $w = (\lambda y_1)x_1(\lambda y_2)x_2 \dots (\lambda y_n)x_n$
+
+				                  $\rightarrow$ Using the associative property of string
+				                  concatenation
+
+				                  ($(a\times b) \times c = a \times (b \times c)$), we can rewrite the string as $w = (x_1y_1)\lambda(x_2y_2)\lambda \dots (x_ny_n)\lambda$
+
+				                  $\rightarrow$ $w = (x_1'y_1')(x_2'y_2') \dots (x_n'y_n')$ where $x_i' \in L_1 \land y_i' \in L_2$
+
+				                  $\therefore$ $w \in (L_1L_2)^*$
+
+			            \end{enumerate}
 
 		      \end{enumerate}
 
@@ -108,7 +151,7 @@ Assignment 1}
 
 			            No. Since there's an odd number of 0s, the any string will always terminate in the following states $\{q_4, q_5, q_6, q_7 \}$. However, not all of these states are acceptance states (only $q_6 \in F$). Therefore, depending on how many 1s are present in the string, we may or may not reach an acceptance state.
 
-			            \textbf{Counter Example:} $w = 01$, Final State = $q_5$
+			            \textbf{Counter Example:} $w = 011$, Final State = $q_6$
 
 			      \item Describe the language accepted by the machine using the set builder notation.
 
