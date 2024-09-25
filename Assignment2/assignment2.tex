@@ -21,81 +21,103 @@ Assignment 2}
 
 \begin{document}
 \begin{spacing}{1.5}
-    \maketitle
+      \maketitle
 
-    \newpage
+      \newpage
 
-    \begin{enumerate}
+      \begin{enumerate}
 
-        \item[1.] [20 Points] For each of the following languages over the alphabet $\Sigma = \{a,b\}$ give an NFA (as a transition diagram) with the specified number of states. \emph{Hint}: try simplifying a DFA and/or use $\lambda$ transitions.
+            \item[1.] [20 Points] For each of the following languages over the alphabet $\Sigma = \{a,b\}$ give an NFA (as a transition diagram) with the specified number of states. \emph{Hint}: try simplifying a DFA and/or use $\lambda$ transitions.
 
-              \begin{enumerate}
-                  \item The language $\{a^n : n \geq 0 \} \cup \{b^na : n \geq 1 \}$ with at most 4 states.
+                  \begin{enumerate}
+                        \item The language $\{a^n : n \geq 0 \} \cup \{b^na : n \geq 1 \}$ with at most 4 states.
 
-                        \textbf{Solution:}
+                              \textbf{Solution:}
 
-                  \item The language $\{w : w \text{ either has no consecutuve a's or no consecutive b's} \}$ with at most 5 states.
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.5\textwidth]{img/q1/q1a.png}
+                              \end{figure}
 
-                        \textbf{Solution:}
+                        \item The language $\{w : w \text{ either has no consecutuve a's or no consecutive b's} \}$ with at most 5 states.
 
-                  \item The language $\{w : w \text{ contains an even number of a's or exactly two b's} \}$ with at most 6 states.
+                              \textbf{Solution:}
 
-                        \textbf{Solution:}
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.5\textwidth]{img/q1/q1b.png}
+                              \end{figure}
 
-                  \item The language $\{ab,aab,aba \}^*$ with at most 4 states.
+                              \newpage
 
-                        \textbf{Solution:}
+                        \item The language $\{w : w \text{ contains an even number of a's or exactly two b's} \}$ with at most 6 states.
 
-              \end{enumerate}
+                              \textbf{Solution:}
 
-              \newpage
-        \item[2.] [20 Points] Let $\Sigma = \{a,b \}$. Convert each NFA below to a DFA using the subset construction. Draw the transition diagram of your DFA, label the states of your DFA by subset of states of the original NFA.
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.5\textwidth]{img/q1/q1c.png}
+                              \end{figure}
 
-              \begin{enumerate}
-                  \item[] a)
-                        \begin{figure}[h!]
-                            \centering
-                            \includegraphics[width=0.6\textwidth]{img/q2/q2a.png}
-                        \end{figure}
+                        \item The language $\{ab,aab,aba \}^*$ with at most 4 states.
 
-                        \textbf{Solution:}
+                              \textbf{Solution:}
 
-                  \item[] b)
-                        \begin{figure}[h!]
-                            \centering
-                            \includegraphics[width=0.6\textwidth]{img/q2/q2b.png}
-                        \end{figure}
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.4\textwidth]{img/q1/q1d.png}
+                              \end{figure}
 
-                        \textbf{Solution:}
-              \end{enumerate}
+                  \end{enumerate}
 
-              \newpage
-        \item[3.] [20 Points] Find a regular expression for each of the following languages.
+                  \newpage
+            \item[2.] [20 Points] Let $\Sigma = \{a,b \}$. Convert each NFA below to a DFA using the subset construction. Draw the transition diagram of your DFA, label the states of your DFA by subset of states of the original NFA.
 
-              \begin{enumerate}
-                  \item $\{ba^nb^m : n \geq 3, m \geq 2 \}$
+                  \begin{enumerate}
+                        \item[] a)
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.6\textwidth]{img/q2/question2a.png}
+                              \end{figure}
 
-                        \textbf{Solution:}
+                              \textbf{Solution:}
 
-                  \item
-                        $
-                            \begin{aligned}[t]
-                                \{ w \in \{a,b \}^* : \text{every maximal } & \text{substring of } w \text{ consisting entirely of symbols $a$} \\ \text{is of length exactly 3} \}
-                            \end{aligned}
-                        $
+                        \item[] b)
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.6\textwidth]{img/q2/question2b.png}
+                              \end{figure}
 
-                        \textbf{Solution:}
+                              \textbf{Solution:}
+                  \end{enumerate}
 
-                  \item $\{w \in \{a,b \}^* : w \text{ does not contain $bab$ as a substring} \}$
+                  \newpage
+            \item[3.] [20 Points] Find a regular expression for each of the following languages.
 
-                        \textbf{Solution:}
+                  \begin{enumerate}
+                        \item $\{ba^nb^m : n \geq 3, m \geq 2 \}$
 
-                  \item $\{w \in \{a,b\}^* : w \text{ begins with $bb$ and } n_b(w) \mod 3 = 0 \}$
+                              \textbf{Solution:}
 
-                        \textbf{Solution:}
-              \end{enumerate}
+                        \item
+                              $
+                                    \begin{aligned}[t]
+                                          \{ w \in \{a,b \}^* : \text{every maximal } & \text{substring of } w \text{ consisting entirely of symbols $a$} \\ \text{is of length exactly 3} \}
+                                    \end{aligned}
+                              $
 
-    \end{enumerate}
+                              \textbf{Solution:}
+
+                        \item $\{w \in \{a,b \}^* : w \text{ does not contain $bab$ as a substring} \}$
+
+                              \textbf{Solution:}
+
+                        \item $\{w \in \{a,b\}^* : w \text{ begins with $bb$ and } n_b(w) \mod 3 = 0 \}$
+
+                              \textbf{Solution:}
+                  \end{enumerate}
+
+      \end{enumerate}
 
 \end{spacing}
 

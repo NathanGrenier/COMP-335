@@ -1,0 +1,1 @@
+- [ ] q1c: Is having 0 a's valid (is it considered even)?
