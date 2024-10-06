@@ -1,3 +1,3 @@
-- [ ] q1c: Is having 0 a's valid (is it considered even)?
-- [ ] q3c: Review it
-- [ ] q3d: Review it
+- [x] q1c: Is having 0 a's valid (is it considered even)?
+- [x] q3c: Review it
+- [x] q3d: Review it
