@@ -32,7 +32,37 @@ Assignment 3}
                   \begin{enumerate}
                         \item[(a)] (10 Points) $L(r) \text{ where } r= ((a+b)(a+b))^*b+a((a+b)(a+b))^*$
 
+                              \textbf{G:}
+                              \begin{itemize}
+                                    \item $S \rightarrow A|B|\lambda$
+                                    \item $A \rightarrow aD|bD$
+                                    \item $D \rightarrow aD|bD|bS$
+                                    \item $B \rightarrow aC$
+                                    \item $C \rightarrow aaS|abS|baS|bbS|$
+                              \end{itemize}
+
+                              \textbf{Equivalent NFA of G:}
+
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.65\textwidth]{img/q1/q1a(NFA).png}
+                              \end{figure}
+                              \newpage
                         \item[(b)] (10 Points) $\{w \in \{a,b\}^* : w \text{ ends in $a$ and $|w| \equiv 1$ } (\mod 3) \}$
+
+                              \textbf{G:}
+                              \begin{itemize}
+                                    \item $S \rightarrow aA|bA|a$
+                                    \item $A \rightarrow aB|bB$
+                                    \item $B \rightarrow aS|bS$
+                              \end{itemize}
+
+                              \textbf{Equivalent NFA of G:}
+
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.35\textwidth]{img/q1/q1b(NFA).png}
+                              \end{figure}
 
                   \end{enumerate}
 
@@ -43,16 +73,18 @@ Assignment 3}
 
                   \begin{enumerate}
                         \item[(a)] (5 Points) Consider $L' = L(bba^*)$ over tha alphabet $\Sigma = \{a,b \}$. Write a regular expression representing $f_1(L')$. Write another regular expression representing $f_2(L')$.
+                              $$r_1 = (a+b)(a+b)bba^*$$
+                              $$r_2 = a^*$$
 
                         \item[(b)] (10 Points) Claim: For every regular language $L$ the language $f_1(L)$ is regular. Clearly state whether the claim is TRUE or FALSE, and then prove your answer.
 
-                              \textbf{Answer:}
+                              \textbf{Answer:} TRUE
 
                               \textbf{Proof:}
 
                         \item[(c)] (10 Points) Claim: For every regular language $L$ the language $f_2(L)$ is regular. Clearly state whether the claim is TRUE or FALSE, and then prove your answer.
 
-                              \textbf{Answer:}
+                              \textbf{Answer:} FALSE
 
                               \textbf{Proof:}
                   \end{enumerate}
