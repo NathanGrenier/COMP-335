@@ -27,32 +27,49 @@ Assignment 4}
 
       \begin{enumerate}
 
-            \item[1.] [20 Points]
+            \item[1.] [20 Points] For each of the following languages, give a context-free grammar (CFG).
 
                   \begin{enumerate}
-                        \item[(a)] (10 Points)
+                        \item[(a)] (5 Points) $L_a = \{a^nb^m : m,n \geq 0 \text{ and } 2n \leq m \leq 3n \}$
 
 
+                        \item[(b)] (5 Points) $L_b = \{a^nb^mc^k : k=2m+n \}$
 
-                              % \begin{figure}[h!]
-                              %       \centering
-                              %       \includegraphics[width=0.65\textwidth]{img/q1/q1a(NFA).png}
-                              % \end{figure}
+
+                        \item[(c)] (5 Points) $L_c = \{a^nb^mc^k : n=m \text{ or } m \leq k \}$
+
+
+                        \item[(d)] (5 Points) $L_d = \{w \in \{a,b\}^* : w \neq xx, \text{ for any } x \in \{a,b\}^* \}$
+
+
 
                   \end{enumerate}
 
                   \newpage
-            \item[2.] [25 Points]
+            \item[2.] [10 Points] Consider the language $L=\{a^{n+1}b^n : n \geq 0 \}$
 
                   \begin{enumerate}
-                        \item[(a)] (5 Points)
+                        \item[(a)] (5 Points) Describe in English the complement $\overline{L}$ of $L$. Your description should specify the types of strings that are in $\overline{L}$. That is, it is not acceptable to say $\overline{L}$ includes every string over $\{a,b \}$ that is not in $L$, which is obviously true.
+
+
+                        \item[(b)] (5 Points) Give a CFG for $\overline{L}$.
+
+
                   \end{enumerate}
 
                   \newpage
-            \item[3.] [20 Points]
+            \item[3.] [15 Points]
 
                   \begin{enumerate}
-                        \item[(a)] (10 Points)
+                        \item[(a)] (5 Points) Using the procedure discussed in the class, convert $G$ into an equivalent grammar in Chomsky Normal Form (CNF).
+
+
+                        \item[(b)] (5 Points) Find an equivalent grammar to $G$ in Greibach Normal Form (GNF).
+
+
+                        \item[(c)] (5 Points) Suppose we modify the original grammar $G$ as follows: remove the $\lambda \text{-production}$ $A \rightarrow \lambda$ and instead add the unit production $A \rightarrow A$. Let us call the resulting grammar $G'$. Convert $G'$ into CNF, and simplify, if possible. Also describe in English language $L(G')$.
+
+
                   \end{enumerate}
 
       \end{enumerate}
