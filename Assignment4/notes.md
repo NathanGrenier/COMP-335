@@ -1,0 +1,6 @@
+- [ ] Finish 1-d
+- [ ] Review 2-a
+- [ ] Finish 2-b
+- [ ] Review 3-b (ask teacher about conversion)
+- [ ] Finish 3-c (Don't forget to describe the language of G')
+- [ ] Review 3-c (ask teacher about simplifying CNF)

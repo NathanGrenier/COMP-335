@@ -32,16 +32,41 @@ Assignment 4}
                   \begin{enumerate}
                         \item[(a)] (5 Points) $L_a = \{a^nb^m : m,n \geq 0 \text{ and } 2n \leq m \leq 3n \}$
 
+                              $S \rightarrow A | \lambda$ \\
+                              $A \rightarrow aAbbB | \lambda$ \\
+                              $B \rightarrow b | \lambda$
 
                         \item[(b)] (5 Points) $L_b = \{a^nb^mc^k : k=2m+n \}$
 
+                              $S \rightarrow A $ \\
+                              $A \rightarrow aAC_1 | B$ \\
+                              $B \rightarrow bBC_2 | \lambda$ \\
+                              $C_1 \rightarrow c$ \\
+                              $C_2 \rightarrow cc$
 
                         \item[(c)] (5 Points) $L_c = \{a^nb^mc^k : n=m \text{ or } m \leq k \}$
 
+                              $S \rightarrow X | Y | \lambda$ \\
+                              $X \rightarrow A_1C_1$ \\
+                              $A_1 \rightarrow aA_1B_1 | \lambda$ \\
+                              $B_1 \rightarrow b$ \\
+                              $C_1 \rightarrow cC_1 | \lambda$ \\
+                              $Y \rightarrow A_2C_2$ \\
+                              $C_2 \rightarrow B_2C_2c | \lambda$ \\
+                              $B_2 \rightarrow b | \lambda$ \\
+                              $A_2 \rightarrow aA_2 | \lambda$
 
+                              \newpage
                         \item[(d)] (5 Points) $L_d = \{w \in \{a,b\}^* : w \neq xx, \text{ for any } x \in \{a,b\}^* \}$
 
-
+                              $S \rightarrow X | Y$ \\
+                              $X \rightarrow aXa | bXb | aXb | bXa | a | b$ \\
+                              $Y \rightarrow aYa | bYb | aYb | bYa | aY_1a | bY_2b | aY_3b | bY_4a$ \\
+                              $Y_1 \rightarrow bZb | aZb | bZa$ \\
+                              $Y_2 \rightarrow aZa | aZb | bZa$ \\
+                              $Y_3 \rightarrow aZa | bZb | aZb$ \\
+                              $Y_4 \rightarrow aZa | bZb | bZa$ \\
+                              $Z \rightarrow aZa | bZb | aZb | bZa | \lambda$
 
                   \end{enumerate}
 
@@ -51,24 +76,133 @@ Assignment 4}
                   \begin{enumerate}
                         \item[(a)] (5 Points) Describe in English the complement $\overline{L}$ of $L$. Your description should specify the types of strings that are in $\overline{L}$. That is, it is not acceptable to say $\overline{L}$ includes every string over $\{a,b \}$ that is not in $L$, which is obviously true.
 
+                              \textbf{Answer:} \\
+                              The language $\overline{L}$ contains all possible strings except for those where the number of consecutive $a$'s is one more than the number of consecutive $b$'s, where $a$'s always come before $b$'s. This means that the strings that are in $\overline{L}$ are as follows:
+                              \begin{itemize}
+                                    \item $\lambda$
+                                    \item Strings starting with $b$. ($baab$)
+                                    \item Strings ending with $a$. ($aaabba$)
+                                    \item Strings where all $a$'s don't come before all $b$'s. ($aabab$)
+                                    \item Strings where all consecutive $a$'s come before all consecutive $b$'s and the number of $a$'s is not one more than the number of $b$'s. ($aaabbb$)
+                              \end{itemize}
 
                         \item[(b)] (5 Points) Give a CFG for $\overline{L}$.
+
+
 
 
                   \end{enumerate}
 
                   \newpage
-            \item[3.] [15 Points]
+            \item[3.] [15 Points] Let $G$ be the following CFG in which $S$ is the start variable:
+
+                  $S \rightarrow AB | aB$ \\
+                  $A \rightarrow aab | \lambda$ \\
+                  $B \rightarrow bbA$
 
                   \begin{enumerate}
                         \item[(a)] (5 Points) Using the procedure discussed in the class, convert $G$ into an equivalent grammar in Chomsky Normal Form (CNF).
 
+                              \begin{enumerate}
+                                    \item[Step 1:] Remove $\lambda$-productions.
 
+                                          $A \implies \lambda$ \\
+
+                                          $S \rightarrow AB | B | aB$ \\
+                                          $A \rightarrow aab$ \\
+                                          $B \rightarrow bbA | bb$
+
+                                    \item[Step 2:] Remove unit productions.
+
+                                          $S \implies B$ \\
+
+                                          $S \rightarrow AB | aB | bbA | bb$ \\
+                                          $A \rightarrow aab$ \\
+                                          $B \rightarrow bbA | bb$
+
+                                    \item[Step 3:] Remove useless productions.
+
+                                          There are none.
+
+                                    \item[Step 4 and 5:] Convert to CNF.
+
+                                          $S \rightarrow AB | T_aB | T_bV_1 | T_bT_b$ \\
+                                          $V_1 \rightarrow T_bA$ \\
+                                          $A \rightarrow T_aV_2$ \\
+                                          $V_2 \rightarrow T_aT_b$ \\
+                                          $B \rightarrow T_bV_3 | T_bT_b$ \\
+                                          $V_3 \rightarrow T_bA$ \\
+                                          $T_a \rightarrow a$ \\
+                                          $T_b \rightarrow b$
+                              \end{enumerate}
+
+                              \newpage
                         \item[(b)] (5 Points) Find an equivalent grammar to $G$ in Greibach Normal Form (GNF).
 
+                              \textbf{Answer:} \\
+                              We can start the conversion from the CNF grammar we found in part (a).
 
+                              \begin{enumerate}
+                                    \item[Step 1:] Make sure every production's RHS starts with a terminal. If not, substitute the variable until the first character is a terminal (or a variable that encodes a terminal).
+
+                                          $S \rightarrow T_aV_2B | T_aB | T_bV_1 | T_bT_b$ \\
+                                          $V_1 \rightarrow T_bA$ \\
+                                          $A \rightarrow T_aV_2$ \\
+                                          $V_2 \rightarrow T_aT_b$ \\
+                                          $B \rightarrow T_bV_3 | T_bT_b$ \\
+                                          $V_3 \rightarrow T_bA$ \\
+                                          $T_a \rightarrow a$ \\
+                                          $T_b \rightarrow b$
+
+                                    \item[Step 2:] Substitute the variables that encode terminals that are at the start of the RHS of the productions.
+
+                                          $S \rightarrow aV_2B | aB | bV_1 | bT_b$ \\
+                                          $V_1 \rightarrow bA$ \\
+                                          $A \rightarrow aV_2$ \\
+                                          $V_2 \rightarrow aT_b$ \\
+                                          $B \rightarrow bV_3 | bT_b$ \\
+                                          $V_3 \rightarrow bA$ \\
+                                          $T_a \rightarrow a$ \\
+                                          $T_b \rightarrow b$
+                              \end{enumerate}
+
+                              \newpage
                         \item[(c)] (5 Points) Suppose we modify the original grammar $G$ as follows: remove the $\lambda \text{-production}$ $A \rightarrow \lambda$ and instead add the unit production $A \rightarrow A$. Let us call the resulting grammar $G'$. Convert $G'$ into CNF, and simplify, if possible. Also describe in English language $L(G')$.
 
+                              $G'= $ \\
+                              $S \rightarrow AB | aB$ \\
+                              $A \rightarrow aab | A$ \\
+                              $B \rightarrow bbA$
+
+                              \begin{enumerate}
+                                    \item[Step 1:] Remove $\lambda$-productions.
+
+                                          There are none
+
+                                    \item[Step 2:] Remove unit productions.
+
+                                          $A \implies A$ can be removed immediately.
+
+                                          $S \rightarrow AB | aB$ \\
+                                          $A \rightarrow aab$ \\
+                                          $B \rightarrow bbA$
+
+                                    \item[Step 3:] Remove useless productions.
+
+                                          There are none.
+
+                                    \item[Step 4 and 5:] Convert to CNF.
+
+                                          $S \rightarrow AB | T_aB$ \\
+                                          $A \rightarrow T_aV_1$ \\
+                                          $V_1 \rightarrow T_aT_b$ \\
+                                          $B \rightarrow T_bV_2$ \\
+                                          $V_2 \rightarrow T_bA$ \\
+                                          $T_a \rightarrow a$ \\
+                                          $T_b \rightarrow b$
+                              \end{enumerate}
+
+                              The language $L(G')$ is
 
                   \end{enumerate}
 
