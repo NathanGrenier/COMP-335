@@ -64,8 +64,8 @@ Assignment 4}
                               $Y \rightarrow aYa | bYb | aYb | bYa | aY_1a | bY_2b | aY_3b | bY_4a$ \\
                               $Y_1 \rightarrow bZb | aZb | bZa$ \\
                               $Y_2 \rightarrow aZa | aZb | bZa$ \\
-                              $Y_3 \rightarrow aZa | bZb | aZb$ \\
-                              $Y_4 \rightarrow aZa | bZb | bZa$ \\
+                              $Y_3 \rightarrow aZa | bZb | aZb | \lambda$ \\
+                              $Y_4 \rightarrow aZa | bZb | bZa | \lambda$ \\
                               $Z \rightarrow aZa | bZb | aZb | bZa | \lambda$
 
                   \end{enumerate}
@@ -82,13 +82,22 @@ Assignment 4}
                                     \item $\lambda$
                                     \item Strings starting with $b$. ($baab$)
                                     \item Strings ending with $a$. ($aaabba$)
-                                    \item Strings where all $a$'s don't come before all $b$'s. ($aabab$)
-                                    \item Strings where all consecutive $a$'s come before all consecutive $b$'s and the number of $a$'s is not one more than the number of $b$'s. ($aaabbb$)
+                                    \item Any string $\{x(ba)y : x,y \in \{ a,b \}^* \}$ (including $a^{n+1}(ba)b^n$).
+                                    \item Strings where all consecutive $a$'s come before all consecutive $b$'s and the number of $a$'s is not one more than the number of $b$'s ($|a|+1 \not= |b|$). This can be further broken down into:
+                                          \begin{enumerate}
+                                                \item $|b| < |a|+1 \equiv |b| \leq |a|$
+                                                \item $|b| > |a|+1 \equiv |b| \geq |a| + 2$
+                                          \end{enumerate}
                               \end{itemize}
 
                         \item[(b)] (5 Points) Give a CFG for $\overline{L}$.
 
-
+                              $S \rightarrow S_1 | S_2 | bS_3 | S_4 | S_5 | \lambda$ \\
+                              $S_1 \rightarrow aS_1b | S_1b | \lambda$ \\
+                              $S_2 \rightarrow aS_2b | aS_2 | aa$ \\
+                              $S_3 \rightarrow aS_3 | bS_3 | \lambda$ \\
+                              $S_4 \rightarrow aS_4 | bS_4 | a$ \\
+                              $S_5 \rightarrow aS_5 | S_5b | bS_5 | S_5a | ba$
 
 
                   \end{enumerate}
@@ -201,8 +210,14 @@ Assignment 4}
                                           $T_a \rightarrow a$ \\
                                           $T_b \rightarrow b$
                               \end{enumerate}
-
-                              The language $L(G')$ is
+                              \newpage
+                              The language $L(G')$ accepts only the following 2 string:
+                              \begin{enumerate}
+                                    \item $abbaaab$
+                                    \item $aabbbaab$
+                              \end{enumerate}
+                              It can also be described by the following regular expression:
+                              $$r=(aab+a)bbaab$$
 
                   \end{enumerate}
 
