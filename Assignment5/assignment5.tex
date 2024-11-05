@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{graphics}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage{alltt}
+\usepackage{array}	
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{listings}
+
+\usepackage{amssymb,amsmath, amsthm}
+\usepackage{zed-csp}
+\usepackage[cc]{titlepic}
+
+\title{COMP 335: Introduction to Theoretical Computer Science\\
+\ \\
+Assignment 5}
+\author{Nathan Grenier}
+\date{\today \\ Fall 2024}
+
+\begin{document}
+\begin{spacing}{1.5}
+      \maketitle
+
+      \newpage
+
+      \begin{enumerate}
+
+            \item[1.] [10 Points] Show that the following grammar $G$, where $S$ is the starting variable, is ambiguous.
+
+                  \textbf{Grammar:}
+
+                  $S \rightarrow AB | aaaB$ \\
+                  $A \rightarrow a | Aa$ \\
+                  $B \rightarrow b$
+
+                  \textbf{Proof of Ambiguity:}
+
+
+                  \newpage
+            \item[2.] [10 Points] A context-free grammar $G=(V,T,S,P)$ is said to be a simple grammar or s-grammar if all its productions are of the form $A \rightarrow ax$, where $A \in V, a \in T, x \in V^*$, and any pair $(A,a)$ occurs at most once in $P$.
+
+                  Find an s-grammar for $L=\{a^nb^{2n} : n \geq 1\}$.
+
+                  \textbf{Answer:}
+
+                  \newpage
+            \item[3.] [10 Points] Give an NPDA with 2 states that accepts $L=\{a^nb^{n+1} : n \geq 0\}$
+
+                  \textbf{Answer:}
+                  \newpage
+            \item[4.] [20 Points] For each of the following CFLs, give a "direct" design for an NPDA. That is, it is not acceptable to first find a CFG and then convert it into an NPDA.
+                  \begin{enumerate}
+                        \item[(a)] $L_1=\{a^nb^{2n+1} : n \geq 0 \}$
+
+                        \item[(b)] $L_2=\{w \in \{a,b \}^* : n_a(w) \leq 3n_b(w) \}$
+
+                  \end{enumerate}
+                  \newpage
+            \item[5.] [20 Points] Show that the following CFLs are deterministic.
+                  \begin{enumerate}
+                        \item[(a)] $L_1=\{(ab)^nb(ba)^n : n \geq 0 \} \cup \{(ab)^nb : n \geq 0 \}$
+
+                        \item[(b)] $L_2=\{w \in \{a,b \}^* : n_a(w) \not= n_b(w) \}$
+
+                  \end{enumerate}
+
+      \end{enumerate}
+
+\end{spacing}
+
+\end{document}
