@@ -37,6 +37,20 @@ Assignment 5}
 
                   \textbf{Proof of Ambiguity:}
 
+                  First we decompose the grammar so that productions only have 1 result.
+
+                  $S \rightarrow AB$ \\
+                  $S \rightarrow aaaB$ \\
+                  $A \rightarrow a$ \\
+                  $A \rightarrow Aa$ \\
+                  $B \rightarrow b$
+
+                  Then we show that there are at least different 2 leftmost derivations that result in the same string.
+
+                  \begin{itemize}
+                        \item[1)] $S \implies^2 aaaB \implies^5 aaab$
+                        \item[2)] $S \implies^1 AB \implies^4 AaB \implies^4 AaaB \implies^3 aaaB \implies^5 aaab$
+                  \end{itemize}
 
                   \newpage
             \item[2.] [10 Points] A context-free grammar $G=(V,T,S,P)$ is said to be a simple grammar or s-grammar if all its productions are of the form $A \rightarrow ax$, where $A \in V, a \in T, x \in V^*$, and any pair $(A,a)$ occurs at most once in $P$.
@@ -45,16 +59,34 @@ Assignment 5}
 
                   \textbf{Answer:}
 
-                  \newpage
             \item[3.] [10 Points] Give an NPDA with 2 states that accepts $L=\{a^nb^{n+1} : n \geq 0\}$
 
-                  \textbf{Answer:}
+                  \textbf{Answer:} Note: The start symbol in the stack is $Z$.
+
+                  \begin{figure}[h!]
+                        \centering
+                        \includegraphics[width=0.6\textwidth]{img/q3/q3.png}
+                  \end{figure}
+
                   \newpage
             \item[4.] [20 Points] For each of the following CFLs, give a "direct" design for an NPDA. That is, it is not acceptable to first find a CFG and then convert it into an NPDA.
+
+                  \textbf{Note:} The start symbol in the stack is $Z$.
+
                   \begin{enumerate}
                         \item[(a)] $L_1=\{a^nb^{2n+1} : n \geq 0 \}$
 
+                              \begin{figure}[h!]
+                                    \centering
+                                    \includegraphics[width=0.6\textwidth]{img/q4/q4a.png}
+                              \end{figure}
+
                         \item[(b)] $L_2=\{w \in \{a,b \}^* : n_a(w) \leq 3n_b(w) \}$
+
+                              % \begin{figure}[h!]
+                              %       \centering
+                              %       \includegraphics[width=0.55\textwidth]{img/q4/q4b.png}
+                              % \end{figure}
 
                   \end{enumerate}
                   \newpage
