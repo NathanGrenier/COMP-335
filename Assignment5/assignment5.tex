@@ -59,14 +59,19 @@ Assignment 5}
 
                   \textbf{Answer:}
 
+                  $S \rightarrow aXB$ \\
+                  $X \rightarrow aXB_2 | b$ \\
+                  $B_2 \rightarrow bB$ \\
+                  $B \rightarrow b$
+
             \item[3.] [10 Points] Give an NPDA with 2 states that accepts $L=\{a^nb^{n+1} : n \geq 0\}$
 
                   \textbf{Answer:} Note: The start symbol in the stack is $Z$.
 
-                  \begin{figure}[h!]
-                        \centering
-                        \includegraphics[width=0.6\textwidth]{img/q3/q3.png}
-                  \end{figure}
+                  % \begin{figure}[h!]
+                  %       \centering
+                  %       \includegraphics[width=0.6\textwidth]{img/q3/q3.png}
+                  % \end{figure}
 
                   \newpage
             \item[4.] [20 Points] For each of the following CFLs, give a "direct" design for an NPDA. That is, it is not acceptable to first find a CFG and then convert it into an NPDA.
